@@ -33,7 +33,7 @@ app.post('/api/upload', upload.single('resume'), (req, res) => {
   // }
 
   const uploadedPath = path.resolve(__dirname, req.file.path);
-  const pythonPath = path.resolve(__dirname, 'venv/bin/python3.11'); // update if needed
+  const pythonPath = 'python3'; // update if needed
   const scriptPath = path.resolve(__dirname, 'skill_extractor.py');
 
   console.log("🧠 Running Python:");
