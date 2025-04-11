@@ -35,7 +35,7 @@ stop_words = set(stopwords.words('english'))
 
 # Sample skill keywords (you can expand this list or use a skill dataset)
 SKILL_KEYWORDS = {
-    "python", "java", "c++", "html", "css", "javascript", "react",
+    "java", "c++", "html", "css", "javascript", "react",
     "node.js", "sql", "mysql", "mongodb", "git", "docker",
     "machine learning", "deep learning", "data science", "linux",
     "tensorflow", "pandas", "numpy", "flask", "django"
