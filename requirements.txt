@@ -1,11 +1,6 @@
 requests
 beautifulsoup4
 pymupdf
+spacy==3.7.2
 nltk
 selenium
-
-# Use prebuilt spaCy binary wheel (no compile issues)
-spacy @ https://github.com/explosion/spacy/releases/download/v3.7.4/spacy-3.7.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
-
-# SpaCy model
-https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.1/en_core_web_sm-3.7.1-py3-none-any.whl
