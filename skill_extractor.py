@@ -5,7 +5,6 @@ from bs4 import BeautifulSoup
 import fitz  # PyMuPDF
 import spacy
 import nltk
-nltk.download('stopwords')
 from nltk.corpus import stopwords
 import re
 
