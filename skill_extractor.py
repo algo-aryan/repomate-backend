@@ -5,7 +5,6 @@ from bs4 import BeautifulSoup
 import fitz  # PyMuPDF
 import spacy
 import nltk
-nltk.download('stopwords')
 from nltk.corpus import stopwords
 import re
 
@@ -34,12 +33,68 @@ nlp = spacy.load("en_core_web_sm")
 stop_words = set(stopwords.words('english'))
 
 # Sample skill keywords (you can expand this list or use a skill dataset)
-SKILL_KEYWORDS = {
-    "java", "c++", "html", "css", "javascript", "react",
-    "node.js", "sql", "mysql", "mongodb", "git", "docker",
-    "machine learning", "deep learning", "data science", "linux",
-    "tensorflow", "pandas", "numpy", "flask", "django"
-}
+SKILL_KEYWORDS = [
+    # 🧠 Broad Skill Domains / Roles
+    "frontend developer", "backend developer", "fullstack developer", "data scientist",
+    "data analyst", "machine learning", "deep learning", "artificial intelligence",
+    "ai engineer", "nlp", "computer vision", "data science", "mle", "dl", "ai", "ml",
+    "devops", "mobile developer", "web3 developer", "game developer", "cloud engineer",
+    "qa engineer", "automation tester", "security analyst",
+
+    # 🌐 Frontend Frameworks & Tools
+    "react.js", "vue.js", "next.js", "svelte", "tailwind css", "bootstrap", "chakra ui",
+    "material ui", "vite", "framer motion", "styled components", "gsap",
+
+    # 🔧 Backend Frameworks & Tools
+    "express.js", "nestjs", "hapi.js", "adonisjs", "laravel", "symfony", "fastapi",
+    "asp.net core", "rails", "gin gonic", "actix", "spring boot", "fiber",
+
+    # 🤖 Machine Learning / AI
+    "scikit-learn", "xgboost", "lightgbm", "catboost", "pytorch", "tensorflow",
+    "keras", "onnx", "mlflow", "huggingface transformers", "openvino", "deepspeed",
+    "fastai", "auto-sklearn", "tpot", "wandb", "optuna",
+
+    # 💬 NLP Tools & Libraries
+    "nltk", "spacy", "textblob", "gensim", "polyglot", "stanford nlp", "flair nlp",
+    "huggingface", "transformers", "bert", "roberta", "gpt", "sentence-transformers",
+
+    # 📊 Data Science & Analytics
+    "power bi", "tableau", "looker", "superset", "metabase", "seaborn", "matplotlib",
+    "plotly", "bokeh", "pandas profiling", "sweetviz", "datapane", "dvc",
+
+    # 🗃️ Databases & Storage
+    "mongodb", "postgresql", "redis", "neo4j", "dynamodb", "elastic search", "supabase",
+    "influxdb", "cassandra", "firebase firestore", "clickhouse", "tidb",
+
+    # ☁️ DevOps / Cloud
+    "docker", "kubernetes", "ansible", "terraform", "jenkins", "prometheus", "grafana",
+    "pagerduty", "argocd", "helm", "azure pipelines", "aws lambda", "gcp cloud run",
+    "cloudflare", "netlify", "vercel",
+
+    # 🔐 Cybersecurity
+    "owasp zap", "burp suite", "metasploit", "nmap", "wireshark", "snort", "splunk", 
+    "suricata", "hashicorp vault", "fail2ban", "crowdstrike",
+
+    # 📱 Mobile App Development
+    "flutter", "react native", "ionic", "xamarin", "kivy", "jetpack compose",
+    "nativebase", "codemagic",
+
+    # 🎮 Game Development / Graphics
+    "unity", "unreal engine", "godot", "three.js", "babylon.js", "blender",
+    "panda3d", "playcanvas",
+
+    # 🌍 Web3 / Blockchain
+    "solidity", "ethers.js", "web3.js", "hardhat", "truffle", "alchemy", "moralis",
+    "polygon", "chainlink", "ipfs", "pinata", "foundry",
+
+    # 🧪 Testing / QA
+    "cypress", "playwright", "jest", "mocha", "chai", "postman", "newman", "selenium",
+    "testcafe", "allure", "jmeter",
+
+    # 🧠 Specialized AI Use Cases
+    "ocr", "image segmentation", "object detection", "face recognition",
+    "pose estimation", "edge ai", "tinyml", "autonomous agents", "rasa", "langchain"
+]
 
 
 
